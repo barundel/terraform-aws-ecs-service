@@ -23,7 +23,7 @@ resource "aws_ecs_service" "service" {
 }
 
 resource "aws_ecs_task_definition" "task" {
-  family                = "service"
+  family                = var.service_name
   container_definitions = var.container_definitions
 
   placement_constraints {
