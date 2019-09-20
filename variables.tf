@@ -42,3 +42,7 @@ variable "tags" {
 variable "log_group_retention" {
   default = 7
 }
+
+variable "task_role_arn " {
+  default = ""
+}

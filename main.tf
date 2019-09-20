@@ -30,6 +30,8 @@ resource "aws_ecs_task_definition" "task" {
   family = var.service_name
   container_definitions = var.container_definitions
 
+  task_role_arn = var.task_role_arn
+
   placement_constraints {
     type = "memberOf"
     expression = "attribute:ecs.availability-zone in [eu-west-1a, eu-west-1b, eu-west-1c]"
